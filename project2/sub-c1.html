@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="gnbsub.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>sub-c1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+        font-family: sans-serif;
+      }
+      li {
+        list-style: none;
+      }
+      .clear::before,
+      .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      header {
+        z-index: 9;
+        height: 95px;
+        /* gnbBg의 기준점 */
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      h2 {
+        font-size: 3rem;
+        padding-bottom: 5%;
+        text-align: center;
+      }
+      .coffee {
+        padding-top: 150px;
+      }
+      .swiper {
+        width: 100%;
+      }
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body {
+        margin: 0;
+        /*font-family: 'Noto Serif KR', serif;*/
+        background-color: #ffffff;
+        color: #333;
+        overflow-x: hidden;
+        position: relative;
+        font-size: 1.1rem;
+      }
+      /* ----------------------- */
+      .container {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 0 350px; /* 좌우 여백 */
+        gap: 20px; /* 좌우 box 간 간격 */
+        align-items: flex-start;
+      }
+      .left {
+        flex: 1;
+        background: url("img/c9.png") no-repeat center center;
+        background-size: contain;
+        background-color: #f5f5f5;
+        height: 450px; /* 고정 높이 지정 가능 */
+      }
+      .right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 100px;
+      }
+      /* 텍스트 요소들 스타일링 */
+      .logo-box {
+        height: 40px;
+        margin-bottom: 30px;
+      }
+      .logo-box img {
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+      .logo-box:hover img {
+        transform: scale(1.1);
+      }
+      .submenu {
+        display: none;
+        position: absolute;
+        background: white;
+        z-index: 10;
+      }
+      li:hover > .submenu {
+        display: block;
+      }
+      .coffee-name {
+        font-size: 2.5rem;
+        color: #000000;
+        margin-bottom: 10px;
+      }
+      .coffee-name:hover {
+        color: #64341e;
+      }
+      .coffee-desc {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 40px;
+      }
+      /* 영양정보 테이블 영역 */
+      .nutrition-wrap {
+        width: 100%;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+      }
+      .nutrition-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #6f4e37;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 10px;
+        text-align: left;
+        margin-bottom: 12px;
+      }
+      .nutrition-table {
+        width: 100%;
+        max-width: 1000px;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        font-family: "Noto Sans KR", sans-serif;
+        text-align: center;
+      }
+      .nutrition-table th {
+        padding: 14px 16px;
+        background-color: #f6f3ef;
+        color: #5c4033;
+        font-weight: 600;
+        border: 1px solid #ccc;
+      }
+      .nutrition-table td {
+        padding: 14px 16px;
+        background-color: #fdfaf6;
+        border: 1px solid #ccc;
+        color: #333;
+      }
+      .nutrition-table tr:hover td {
+        background-color: #fdf4ec;
+      }
+      /* 알레르기 정보 */
+      .allergy-wrap {
+        width: 100%;
+        max-width: 600px;
+        padding: 0 10px;
+        margin-top: 12px;
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.5;
+        text-align: left;
+      }
+      .allergy-note {
+        margin-top: 4px;
+      }
+      .name {
+        font-size: 1.2rem;
+      }
+      .p1 {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      .st1-bg {
+        padding-top: 50px;
+        padding-bottom: 5%;
+      }
+      .st1 {
+        width: 1400px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: auto;
+        gap: 40px 20px;
+      }
+      .s1 {
+        width: 23%;
+        height: 300px;
+      }
+      .s1 img {
+        width: 100%;
+      }
+      .s1 p {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      .s1:hover img {
+        transform: scale(1.03);
+      }
+      .c2c img {
+        width: 100%;
+        height: 315px;
+      }
+      .mb-bg {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .mb1 img {
+        width: 100%;
+        height: 100%;
+      }
+      .banner {
+        background: url(img/banner.png) no-repeat center;
+        background-size: 100% 100%;
+        height: 400px;
+        text-align: center;
+      }
+      .banner img {
+        width: 100%;
+        height: 100%;
+      }
+      h1 {
+        padding-top: 8%;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      h4 {
+        padding-top: 1%;
+        text-align: center;
+        font-size: 1rem;
+      }
+      .foot-bg {
+        height: 180px;
+        background-color: rgb(37, 37, 37);
+      }
+      .foot {
+        display: flex;
+        justify-content: space-between;
+      }
+      .f1 {
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 2%;
+        color: #fff;
+      }
+      .f2 {
+        font-size: 0.8rem;
+        text-align: center;
+        color: #fff;
+      }
+
+      /* ----------------------- */
+      @media screen and (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          padding: 0 30px;
+        }
+        .left,
+        .right {
+          width: 100%;
+          height: auto;
+        }
+        .logo-box {
+          height: 60px;
+        }
+        .coffee-name {
+          font-size: 2rem;
+        }
+        .coffee-desc {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="head-wrap">
+        <div class="row">
+          <div class="head clear">
+            <div class="logo">
+              <div class="logo-bg">
+                <a href="index.html">
+                  <img src="img/logo.png" width="50px"
+                /></a>
+              </div>
+            </div>
+            <nav class="gnb">
+              <ul class="clear">
+                <li>
+                  <a href="#">Menu</a>
+                  <ul class="submenu">
+                    <li><a href="sub-c1.html">COFFEE</a></li>
+                    <li><a href="sub-t1.html">라떼ㆍ초콜릿ㆍ티</a></li>
+                    <li><a href="sub-h1.html">할리치노ㆍ빙수</a></li>
+                    <li><a href="sub-j1.html">수무디ㆍ주스</a></li>
+                    <li><a href="sub-s1.html">스파클링</a></li>
+                    <li><a href="#">푸드</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLS Mall</a>
+                  <ul class="submenu">
+                    <li><a href="#">할리스콘</a></li>
+                    <li><a href="#">할리스카드</a></li>
+                    <li><a href="#">E-Store</a></li>
+                    <li><a href="#">구매내역</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Membership</a>
+                  <ul class="submenu">
+                    <li><a href="#">스마트 오더</a></li>
+                    <li><a href="#">멤버쉽 혜택</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLYS NEWS</a>
+                  <ul class="submenu">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">매장검색</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLYS is</a>
+                  <ul class="submenu">
+                    <li><a href="#">HOLLYS</a></li>
+                    <li><a href="#">할리스 위치 및 연락처</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">가맹문의 및 절차</a></li>
+                    <li><a href="#">B2B사업 & 케이터링</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!--.nav-->
+            <div id="barMenu">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <!--.head-->
+        </div>
+        <!--.row-->
+      </div>
+      <!--.head wrap-->
+      <div id="gnbBg"></div>
+    </header>
+
+    <h2 class="coffee">COFFEE</h2>
+    <div class="container">
+      <div class="left"></div>
+      <div class="right">
+        <div class="logo-box">
+          <img src="img/fts.png" />
+        </div>
+        <div class="coffee-name">
+          아메리카노
+          <p class="name">Americano</p>
+        </div>
+        <div class="coffee-desc">
+          진한 에스프레소의 맛과 향을 부드럽게 즐길 수 있는 <br />
+          아메리칸 스타일의 커피<br />
+          <br />
+          *'고카페인 함유' 제품으로 어린이, 임산부, 카페인 민감자는
+          <br />섭취에 주의하여 주시기 바랍니다
+        </div>
+      </div>
+    </div>
+
+    <div class="nutrition-wrap">
+      <!-- 표 위 설명 -->
+      <p class="nutrition-title">
+        제품영양정보 (1회 제공량/Regular/354ml 기준(Grande/472ml, Venti/591ml))
+      </p>
+      <table class="nutrition-table">
+        <!-- 공통 아래에 위치한 영양정보 테이블 -->
+        <tr>
+          <th></th>
+          <th>칼로리</th>
+          <th>당류</th>
+          <th>단백질</th>
+          <th>포화지방</th>
+          <th>나트륨</th>
+          <th>카페인</th>
+        </tr>
+        <tr>
+          <td>HOT</td>
+          <td>12kcal</td>
+          <td>0g(0%)</td>
+          <td>1g(2%)</td>
+          <td>0.1g(0%)</td>
+          <td>5mg(0%)</td>
+          <td>114mg</td>
+        </tr>
+        <tr>
+          <td>ICED</td>
+          <td>12kcal</td>
+          <td>0g(0%)</td>
+          <td>1g(2%)</td>
+          <td>0.1g(0%)</td>
+          <td>5mg(0%)</td>
+          <td>114mg</td>
+        </tr>
+      </table>
+      <!-- 알레르기 정보 -->
+      <div class="allergy-wrap">
+        <p class="allergy-info">알레르기 유발요인: 해당 없음</p>
+        <p class="allergy-note">
+          *식품 등의 표시·광고에 관한 법률에 의거하여 알레르기 표시항목에
+          한해서만 표기함
+        </p>
+      </div>
+    </div>
+
+    <div class="st1-bg">
+      <div class="st1">
+        <!-- <div class="s1">
+         <a href="sub1.html">
+          <img src="img/c9.png" />
+          <p class="p1">아메리카노</p>
+         </a>
+        </div> -->
+        <div class="s1">
+          <a href="sub-c2.html">
+            <img src="img/c2.png" />
+            <p class="p1">디카페인 바닐라 딜라이트</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c3.html">
+            <img src="img/c3.png" />
+            <p class="p1">디카페인 아메리카노</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c4.html">
+            <img src="img/c4.png" />
+            <p class="p1">디카페인 카페라떼</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c4.html">
+            <img src="img/c6.png" />
+            <p class="p1">바닐라 딜라이트</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c6.html">
+            <img src="img/c7.png" />
+            <p class="p1">블랙 아리아 딥라떼</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c7.html">
+            <img src="img/c8.png" />
+            <p class="p1">블랙 아리아 아메리카노</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c8.html">
+            <img src="img/c10.png" />
+            <p class="p1">아포가토</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c9.html">
+            <img src="img/c11.png" />
+            <p class="p1">에스프레소</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c10.html">
+            <img src="img/c12.png" />
+            <p class="p1">카라멜 마키아또</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c11.html">
+            <img src="img/c13.png" />
+            <p class="p1">카페라떼</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c12.html">
+            <img src="img/c18.png" />
+            <p class="p1">콜드브루</p>
+          </a>
+        </div>
+        <div class="s1">
+          <a href="sub-c13.html">
+            <img src="img/c16.png" />
+            <p class="p1">콜드브루 딜라이트</p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <h1>HOLLYS B2B Solution</h1>
+      <h4>
+        할리스는 20년의 커피 노하우를 기반으로 한 할리스 B2B 솔루션을
+        소개합니다.
+      </h4>
+      <h4>▶바로가기◀</h4>
+    </div>
+
+    <div class="foot-bg">
+      <p class="f1">
+        개인정보처리방침 | 서비스이용약관 | 멤버십이용약관 | 할리스카드이용약관
+        | 고객문의 | 사이트맵 | BI소개
+      </p>
+      <p class="f2">
+        <br />법인명 : (주)케이지에프앤비 대표자 : 이종현 사업자등록번호
+        211-87-61044 <br />통신판매업 : 서울종로-0193호 주소 : 서울특별시 중구
+        통일로 92, 9층(순화동, 케이지타워) <br />대표전화 : 02-2188-7100
+        (가맹문의 : 02-6350-7229)<br />
+        COPYRIGHT (C)KE F&amp;B.All Gights Reserved.
+      </p>
+    </div>
+  </body>
+</html>
+
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+></script>
+<script type="text/javascript" src="fullnav.js"></script>
+
+//Swiper JS
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  //Initialize Swiper
+
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
