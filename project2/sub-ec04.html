@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <title>sub-j7</title>
+    <title>sub-ec1</title>
 
     <style>
       * {
@@ -82,29 +82,7 @@
         position: relative;
         font-size: 1.1rem;
       }
-      /* ----------------------- */
-      .container {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        padding: 0 350px; /* 좌우 여백 */
-        gap: 20px; /* 좌우 box 간 간격 */
-        align-items: flex-start;
-      }
-      .left {
-        flex: 1;
-        background: url("img/j7.png") no-repeat center center;
-        background-size: contain;
-        background-color: #f5f5f5;
-        height: 450px; /* 고정 높이 지정 가능 */
-      }
-      .right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 100px;
-      }
+
       /* 텍스트 요소들 스타일링 */
       .logo-box {
         height: 40px;
@@ -131,79 +109,29 @@
         color: #555;
         margin-bottom: 40px;
       }
-      /* 영양정보 테이블 영역 */
-      .nutrition-wrap {
-        width: 100%;
-        padding: 40px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-      }
-      .nutrition-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #6f4e37;
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        text-align: left;
-        margin-bottom: 12px;
-      }
-      .nutrition-table {
-        width: 100%;
-        max-width: 1000px;
-        border-collapse: collapse;
-        background-color: #fff;
-        border-radius: 2px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        font-family: "Noto Sans KR", sans-serif;
-        text-align: center;
-      }
-      .nutrition-table th {
-        padding: 14px 16px;
-        background-color: #f6f3ef;
-        color: #5c4033;
-        font-weight: 600;
-        border: 1px solid #ccc;
-      }
-      .nutrition-table td {
-        padding: 14px 16px;
-        background-color: #fdfaf6;
-        border: 1px solid #ccc;
-        color: #333;
-      }
-      .nutrition-table tr:hover td {
-        background-color: #fdf4ec;
-      }
-      /* 알레르기 정보 */
-      .allergy-wrap {
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #666;
-        line-height: 1.5;
-        text-align: left;
-      }
-      .allergy-note {
-        margin-top: 4px;
-      }
+
       .name {
         font-size: 1.2rem;
       }
       .p1 {
         font-size: 0.8rem;
-        text-align: center;
+        color: #000000;
+      }
+      .p2 {
+        font-size: 1.2rem;
+        text-align: ;
+        color: #cc0808;
+      }
+      .p3 {
+        font-size: 0.8rem;
+        padding-bottom: 2%;
       }
       .st1-bg {
         padding-top: 50px;
         padding-bottom: 5%;
       }
       .st1 {
-        width: 1400px;
+        width: 1000px;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -211,20 +139,18 @@
         height: auto;
         gap: 40px 20px;
       }
-      .s1 {
-        width: 25%;
-        height: 300px;
-      }
-      .s1 img {
+
+      .e1 {
         width: 100%;
       }
-      .s1 p {
+      .e1 img {
+        width: 100%;
+      }
+      .e1 p {
         font-size: 1rem;
         font-weight: bold;
       }
-      .s1:hover img {
-        transform: scale(1.03);
-      }
+
       .c2c img {
         width: 100%;
         height: 315px;
@@ -377,124 +303,24 @@
       <div id="gnbBg"></div>
     </header>
 
-    <h2 class="coffee">스무디ㆍ주스</h2>
-    <div class="container">
-      <div class="left"></div>
-      <div class="right">
-        <div class="logo-box">
-          <img src="img/fts.png" />
-        </div>
-        <div class="coffee-name">
-          오렌지 당근 착즙 주스
-          <p class="name">Orange Carrot Juice</p>
-        </div>
-        <div class="coffee-desc">
-          오렌지, 당근, 사과가 어우러진 달콤한 과채 주스 <br />
-        </div>
-      </div>
-    </div>
-
-    <div class="nutrition-wrap">
-      <!-- 표 위 설명 -->
-      <p class="nutrition-title">
-        제품영양정보 (1회 제공량/ Regular / 354ml 기준)
-      </p>
-      <table class="nutrition-table">
-        <!-- 공통 아래에 위치한 영양정보 테이블 -->
-        <tr>
-          <th></th>
-          <th>칼로리</th>
-          <th>당류</th>
-          <th>단백질</th>
-          <th>포화지방</th>
-          <th>나트륨</th>
-          <th>카페인</th>
-        </tr>
-        <!--<tr>
-          <td>HOT</td>
-          <td>245kcal</td>
-          <td>31g(31%)</td>
-          <td>10g(17%)</td>
-          <td>5.6g(38%)</td>
-          <td>213mg(11%)</td>
-          <td>83mg</td>
-        </tr> -->
-        <tr>
-          <td>ICED</td>
-          <td>120kcal</td>
-          <td>23g(23%)</td>
-          <td>1g(2%)</td>
-          <td>0.0g(0%)</td>
-          <td>55mg(3%)</td>
-          <td>0mg</td>
-        </tr>
-      </table>
-      <!-- 알레르기 정보 
-      <div class="allergy-wrap">
-        <p class="allergy-info">알레르기 유발요인: 우유, 대두</p>
-        <p class="allergy-note">
-          *식품 등의 표시·광고에 관한 법률에 의거하여 알레르기 표시항목에
-          한해서만 표기함
-        </p>
-      </div>-->
-    </div>
+    <h2 class="coffee">EVENT</h2>
 
     <div class="st1-bg">
       <div class="st1">
-        <div class="s1">
-          <a href="sub-j1.html">
-            <img src="img/j1.png" />
-            <p class="p1">딸기 스무디</p>
+        <div class="e1">
+          <a href="sub-ec04.html">
+            <p class="p2">감사와 사랑을 가득 담은 카네이션 케이크♥</p>
+            <img src="img/ec004.png" />
           </a>
         </div>
-        <div class="s1">
-          <a href="sub-j2.html">
-            <img src="img/j2.png" />
-            <p class="p1">애플 망고 스무디</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-j3.html">
-            <img src="img/j3.png" />
-            <p class="p1">제주 오랜지 금귤 스무디</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-j4.html">
-            <img src="img/j4.png" />
-            <p class="p1">피치 딸기 블랜디드</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-j5.html">
-            <img src="img/j5.png" />
-            <p class="p1">사과 비트 착즙 주스</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-j6.html">
-            <img src="img/j6.png" />
-            <p class="p1">오렌지 자몽 생과일 주스</p>
-          </a>
-        </div>
-        <!--<div class="s1">
-          <a href="sub-j7.html">
-            <img src="img/j7.png" />
-            <p class="p1">오렌지 당근 착즙 주스</p>
+        <!--<div class="e1">
+          <a href="sub-ec05.html">
+            <img src="img/ec05.jpg" />
+            <p class="p1">매장이벤트</p>
+            <p class="p2">#에너지부스터, 몬스터 아메리카노로 에너지 충전하세요!</p>
+            <p class="p3"><b>공지기간<b> 2025-03-28~2025-09-30</p>
           </a>
         </div>-->
-        <div class="s1">
-          <a href="sub-j8.html">
-            <img src="img/j8.png" />
-            <p class="p1">청포도 케일 착즙 주스</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-j9.html">
-            <img src="img/j9.png" />
-            <p class="p1">토마토 생과일 주스</p>
-          </a>
-        </div>
       </div>
     </div>
 
