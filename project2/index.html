@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HOLLYS COFFEE</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" href="main_gnb.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-family: sans-serif;
+      }
+      li {
+        list-style: none;
+      }
+      .clear::before,
+      .clear::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      header {
+        width: 1400px;
+        z-index: 9;
+        height: 95px;
+        /* gnbBg의 기준점 */
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 15px;
+      }
+      main {
+        margin-top: 110px;
+        height: 80vh;
+        margin-bottom: 50px;
+      }
+
+      main img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper {
+        width: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-pagination {
+      }
+
+      body {
+        color: black;
+        font-size: 1.1rem;
+      }
+
+      h2 {
+        padding: 1% 0;
+        text-align: center;
+      }
+      .p1 {
+        font-size: 0.8rem;
+        text-align: center;
+      }
+      .st1-bg {
+        padding: 5% 0%;
+      }
+
+      .st1 {
+        width: 1400px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 800px;
+      }
+
+      .s1 {
+        width: 25%;
+        height: 300px;
+      }
+      .s1 img {
+        width: 100%;
+      }
+      .s1 p {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .s1:hover img {
+        width: ;
+        height: ;
+        transform: scale(1.05);
+      }
+
+      .mp4-bg {
+        width: 1200px;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .c2c img {
+        width: 100%;
+        height: 315px;
+      }
+
+      .mb-bg {
+        width: 1200px;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+      }
+      .mb1 img {
+        width: 100%;
+        height: 100%;
+      }
+      h3 {
+        text-align: center;
+        font-size: 1.6rem;
+        padding-top: 50px;
+      }
+      .qt-bg {
+        padding: 1% 0;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        padding: 0 10%;
+      }
+
+      .qt {
+        min-width: 1000px;
+
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+      }
+      .q1 img {
+        width: 100%;
+        height: 100%;
+        background: no-repeat center;
+      }
+      .q1 {
+        border: 1px solid gray;
+        border-radius: 140px 140px;
+        margin: 0% 10px;
+        width: 90px;
+        height: 90px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+      }
+      .q1:hover {
+        transform: scale(1.1);
+      }
+
+      .banner {
+        background: url(img/banner.png) no-repeat center;
+        background-size: 100% 100%;
+        height: 400px;
+
+        text-align: center;
+      }
+      .banner img {
+        width: 100%;
+        height: 100%;
+      }
+      h1 {
+        padding-top: 8%;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      h4 {
+        padding-top: 1%;
+        text-align: center;
+        font-size: 1rem;
+      }
+      .foot-bg {
+        height: 180px;
+        background-color: rgb(29, 29, 29);
+      }
+
+      .foot {
+        display: flex;
+        justify-content: space-between;
+      }
+      .f1 {
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 2%;
+        color: #fff;
+      }
+
+      .f2 {
+        font-size: 0.8rem;
+        text-align: center;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="head-wrap">
+        <div class="row">
+          <div class="head clear">
+            <div class="logo">
+              <div class="logo-bg">
+                <a href="index.html"><img src="img/logo.png" width="50px" /></a>
+              </div>
+            </div>
+            <nav class="gnb">
+              <ul class="clear">
+                <li>
+                  <a href="#">Menu</a>
+                  <ul class="submenu">
+                    <li><a href="sub-c1.html">COFFEE</a></li>
+                    <li><a href="sub-t1.html">라떼ㆍ초콜릿ㆍ티</a></li>
+                    <li><a href="sub-h1.html">할리치노ㆍ빙수</a></li>
+                    <li><a href="sub-j1.html">스무디ㆍ주스</a></li>
+                    <li><a href="sub-s1.html">스파클링</a></li>
+                    <li><a href="#">푸드</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLS Mall</a>
+                  <ul class="submenu">
+                    <li><a href="#">할리스콘</a></li>
+                    <li><a href="#">할리스카드</a></li>
+                    <li><a href="#">E-Store</a></li>
+                    <li><a href="#">구매내역</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Membership</a>
+                  <ul class="submenu">
+                    <li><a href="#">스마트 오더</a></li>
+                    <li><a href="#">멤버쉽 혜택</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLYS NEWS</a>
+                  <ul class="submenu">
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">매장검색</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">HOLLYS is</a>
+                  <ul class="submenu">
+                    <li><a href="#">HOLLYS</a></li>
+                    <li><a href="#">할리스 위치 및 연락처</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">가맹문의 및 절차</a></li>
+                    <li><a href="#">B2B사업 & 케이터링</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!--.nav-->
+            <div id="barMenu">
+              <div class="bar"></div>
+            </div>
+          </div>
+          <!--.head-->
+        </div>
+        <!--.row-->
+      </div>
+      <!--.head wrap-->
+      <div id="gnbBg"></div>
+    </header>
+
+    <main>
+      <!-- Swiper  -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/main.png" /></div>
+          <div class="swiper-slide">
+            <img src="img/main02.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/main03.png" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+    <h2>HOLLYS Mall</h2>
+
+    <div class="st1-bg">
+      <div class="st1">
+        <div class="s1">
+          <a href="sub-c13.html"></a>
+          <img src="img/c16.png" />
+          <p class="p1">콜드브루 딜라이트</p>
+        </div>
+        <div class="s1">
+          <a href="sub-c3.html"></a>
+          <img src="img/c3.png" />
+          <p class="p1">디카페인 아메리카노</p>
+        </div>
+        <div class="s1">
+          <a href="sub-c2.html"></a>
+          <img src="img/c2.png" />
+          <p class="p1">디카페인 바닐라 딜라이트</p>
+        </div>
+        <div class="s1">
+          <a href="sub-c10.html"></a>
+          <img src="img/c12.png" />
+          <p class="p1">카라멜 마끼아또</p>
+        </div>
+        <div class="s1">
+          <a href="sub-j1.html"></a>
+          <img src="img/j1.png" />
+          <p class="p1">딸기 스무디</p>
+        </div>
+        <div class="s1">
+          <a href="sub-j4.html"></a>
+          <img src="img/j4.png" />
+          <p class="p1">피치 딸기 블렌디드</p>
+        </div>
+        <div class="s1">
+          <a href="sub-j7.html"></a>
+          <img src="img/j7.png" />
+          <p class="p1">오렌지 당근 착즙 주스</p>
+        </div>
+        <div class="s1">
+          <a href="sub-j8.html"></a>
+          <img src="img/j8.png" />
+          <p class="p1">청포도 케일 착즙 주스</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mp4-bg">
+      <div clss="c2c">
+        <iframe
+          width="1200"
+          height="515"
+          src="https://www.youtube.com/embed/cPn9eynS1L8?si
+        =nnEwI1V0mpvPoBAj&amp;start=93"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-pi
+        cture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="mb-bg">
+      <div class="mb1"><img src="img/mb1.jpg" width="700px" /></div>
+      <div class="mb1"><img src="img/mb2.jpg" width="700px" /></div>
+    </div>
+
+    <h3>Quick Menu</h3>
+    <div class="qt-bg">
+      <div class="qt wrap">
+        <div class="q1">
+          <img src="img/q1.png" />
+          <p>HOLLYS Mall</p>
+        </div>
+        <div class="q1">
+          <img src="img/q2.png" />
+          <p>할리스 멤버십</p>
+        </div>
+        <div class="q1">
+          <img src="img/q3.png" />
+          <p>할리스 카드</p>
+        </div>
+        <div class="q1">
+          <img src="img/q4.png" />
+          <p>Event</p>
+        </div>
+        <div class="q1">
+          <img src="img/q5.png" />
+          <p>News</p>
+        </div>
+        <div class="q1">
+          <img src="img/q6.png" />
+          <p>창업안내</p>
+        </div>
+        <div class="q1">
+          <img src="img/q7.png" />
+          <p>고객센터</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner">
+      <h1>HOLLYS B2B Solution</h1>
+      <h4>
+        할리스는 20년의 커피 노하우를 기반으로 한 할리스 B2B 솔루션을
+        소개합니다.
+      </h4>
+      <h4>▶바로가기◀</h4>
+    </div>
+
+    <div class="foot-bg">
+      <p class="f1">
+        개인정보처리방침 | 서비스이용약관 | 멤버십이용약관 | 할리스카드이용약관
+        | 고객문의 | 사이트맵 | BI소개
+      </p>
+      <p class="f2">
+        <br />법인명 : (주)케이지에프앤비 대표자 : 이종현 사업자등록번호
+        211-87-61044 <br />통신판매업 : 서울종로-0193호 주소 : 서울특별시 중구
+        통일로 92, 9층(순화동, 케이지타워) <br />대표전화 : 02-2188-7100
+        (가맹문의 : 02-6350-7229)<br />
+        COPYRIGHT (C)KE F&amp;B.All Gights Reserved.
+      </p>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="fullnav.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: true,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
