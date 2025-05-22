@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <title>sub-t10</title>
+    <title>sub-st1</title>
 
     <style>
       * {
@@ -82,29 +82,7 @@
         position: relative;
         font-size: 1.1rem;
       }
-      /* ----------------------- */
-      .container {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        padding: 0 350px; /* 좌우 여백 */
-        gap: 20px; /* 좌우 box 간 간격 */
-        align-items: flex-start;
-      }
-      .left {
-        flex: 1;
-        background: url("img/t8.png") no-repeat center center;
-        background-size: contain;
-        background-color: #f5f5f5;
-        height: 450px; /* 고정 높이 지정 가능 */
-      }
-      .right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 100px;
-      }
+
       /* 텍스트 요소들 스타일링 */
       .logo-box {
         height: 40px;
@@ -131,79 +109,29 @@
         color: #555;
         margin-bottom: 40px;
       }
-      /* 영양정보 테이블 영역 */
-      .nutrition-wrap {
-        width: 100%;
-        padding: 40px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-      }
-      .nutrition-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #6f4e37;
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        text-align: left;
-        margin-bottom: 12px;
-      }
-      .nutrition-table {
-        width: 100%;
-        max-width: 1000px;
-        border-collapse: collapse;
-        background-color: #fff;
-        border-radius: 2px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        font-family: "Noto Sans KR", sans-serif;
-        text-align: center;
-      }
-      .nutrition-table th {
-        padding: 14px 16px;
-        background-color: #f6f3ef;
-        color: #5c4033;
-        font-weight: 600;
-        border: 1px solid #ccc;
-      }
-      .nutrition-table td {
-        padding: 14px 16px;
-        background-color: #fdfaf6;
-        border: 1px solid #ccc;
-        color: #333;
-      }
-      .nutrition-table tr:hover td {
-        background-color: #fdf4ec;
-      }
-      /* 알레르기 정보 */
-      .allergy-wrap {
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #666;
-        line-height: 1.5;
-        text-align: left;
-      }
-      .allergy-note {
-        margin-top: 4px;
-      }
+
       .name {
         font-size: 1.2rem;
       }
       .p1 {
         font-size: 0.8rem;
-        text-align: center;
+        color: #000000;
+      }
+      .p2 {
+        font-size: 1.2rem;
+        text-align: ;
+        color: #cc0808;
+      }
+      .p3 {
+        font-size: 0.8rem;
+        padding-bottom: 2%;
       }
       .st1-bg {
         padding-top: 50px;
         padding-bottom: 5%;
       }
       .st1 {
-        width: 1400px;
+        width: 1000px;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -211,20 +139,18 @@
         height: auto;
         gap: 40px 20px;
       }
-      .s1 {
-        width: 25%;
-        height: 300px;
-      }
-      .s1 img {
+
+      .e1 {
         width: 100%;
       }
-      .s1 p {
+      .e1 img {
+        width: 100%;
+      }
+      .e1 p {
         font-size: 1rem;
         font-weight: bold;
       }
-      .s1:hover img {
-        transform: scale(1.03);
-      }
+
       .c2c img {
         width: 100%;
         height: 315px;
@@ -310,7 +236,9 @@
           <div class="head clear">
             <div class="logo">
               <div class="logo-bg">
-                <a href="index.html"><img src="img/logo.png" width="50px" /></a>
+                <a href="index.html">
+                  <img src="img/logo.png" width="50px"
+                /></a>
               </div>
             </div>
             <nav class="gnb">
@@ -318,7 +246,7 @@
                 <li>
                   <a href="#">Menu</a>
                   <ul class="submenu">
-                     <li><a href="sub-c1.html">COFFEE</a></li>
+                    <li><a href="sub-c1.html">COFFEE</a></li>
                     <li><a href="sub-t1.html">라떼ㆍ초콜릿ㆍ티</a></li>
                     <li><a href="sub-h1.html">할리치노ㆍ빙수</a></li>
                     <li><a href="sub-j1.html">스무디ㆍ주스</a></li>
@@ -338,7 +266,7 @@
                 <li>
                   <a href="#">Membership</a>
                   <ul class="submenu">
-                     <li><a href="sub-st1.html">스마트 오더</a></li>
+                    <li><a href="sub-st1.html">스마트 오더</a></li>
                     <li><a href="#">멤버쉽 혜택</a></li>
                   </ul>
                 </li>
@@ -375,131 +303,13 @@
       <div id="gnbBg"></div>
     </header>
 
-    <h2 class="coffee">라떼ㆍ초콜릿ㆍ티</h2>
-    <div class="container">
-      <div class="left"></div>
-      <div class="right">
-        <div class="logo-box">
-          <img src="img/fts.png" />
-        </div>
-        <div class="coffee-name">
-          복숭아 얼그레이
-          <p class="name">Peach Earl Grey</p>
-        </div>
-        <div class="coffee-desc">
-          달콤한 복숭아와 얼그레이의 베르가못 향의 조화. <br />
-          깔끔하면서도 달콤한 티베리에이션 음료
-        </div>
-      </div>
-    </div>
-
-    <div class="nutrition-wrap">
-      <!-- 표 위 설명 -->
-      <p class="nutrition-title">
-        제품영양정보 (1회 제공량 / Regular 354ml 기준(Grande/472ml))
-      </p>
-      <table class="nutrition-table">
-        <!-- 공통 아래에 위치한 영양정보 테이블 -->
-        <tr>
-          <th></th>
-          <th>칼로리</th>
-          <th>당류</th>
-          <th>단백질</th>
-          <th>포화지방</th>
-          <th>나트륨</th>
-          <th>카페인</th>
-        </tr>
-        
-          <td>HOT</td>
-          <td>109kcal</td>
-          <td>26g(26%)</td>
-          <td>0g(0%)</td>
-          <td>0.0g(0%)</td>
-          <td>4mg(0%)</td>
-          <td>33mg</td>
-        </tr>
-        <tr>
-          <td>ICED</td>
-          <td>109kcal</td>
-          <td>26g(26%)</td>
-          <td>0g(0%)</td>
-          <td>0.0g(0%)</td>
-          <td>4mg(0%)</td>
-          <td>33mg</td>
-          
-        </tr>
-      </table>
-      <!-- 알레르기 정보 -->
-      <div class="allergy-wrap">
-        <p class="allergy-info">알레르기 유발요인: 복숭아</p>
-        <p class="allergy-note">
-          *식품 등의 표시·광고에 관한 법률에 의거하여 알레르기 표시항목에
-          한해서만 표기함
-        </p>
-      </div>
-    </div>
+    <h2 class="coffee">스마트오더</h2>
 
     <div class="st1-bg">
       <div class="st1">
-        <div class="s1">
-          <a href="sub-t1.html"></a>
-          <img src="img/t12.png" />
-          <p class="p1">제주 말차 라뗴</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t2.html"></a>
-          <img src="img/t6.png" />
-          <p class="p1">로얄 밀크티 라떼</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t3.html"></a>
-          <img src="img/t5.png" />
-          <p class="p1">로얄 밀크 버블티</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t4.html"></a>
-          <img src="img/t16.png" />
-          <p class="p1">핑크 파인 캐모마일티</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t5.html"></a>
-          <img src="img/t7.png" />
-          <p class="p1">민트 초코</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t6.html"></a>
-          <img src="img/t17.png" />
-          <p class="p1">핫 아이스 초코</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t7.html"></a>
-          <img src="img/t20.png" />
-          <p class="p1">화이트 초코</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t8.html"></a>
-          <img src="img/t21.png" />
-          <p class="p1">흑당 버블티</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t9.html"></a>
-          <img src="img/t3.png" />
-          <p class="p1">대추 생강차</p>
-        </div>
-        <!--<div class="s1">
-          <a href="sub-t10.html"></a>
-          <img src="img/t8.png" />
-          <p class="p1">복숭아 얼그레이</p>
-        </div>-->
-        <div class="s1">
-          <a href="sub-t11.html"></a>
-          <img src="img/t10.png" />
-          <p class="p1">유자 캐모마일</p>
-        </div>
-        <div class="s1">
-          <a href="sub-t12.html"></a>
-          <img src="img/t11.png" />
-          <p class="p1">제주 레몬 애플티</p>
+        <div class="e1">
+             <img src="img/st1.png" />
+          </a>
         </div>
       </div>
     </div>
