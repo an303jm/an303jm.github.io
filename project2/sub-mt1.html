@@ -13,7 +13,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <title>sub-c2</title>
+    <title>sub-mt1</title>
 
     <style>
       * {
@@ -82,29 +82,7 @@
         position: relative;
         font-size: 1.1rem;
       }
-      /* ----------------------- */
-      .container {
-        display: flex;
-        flex-direction: row;
-        height: auto;
-        padding: 0 350px; /* 좌우 여백 */
-        gap: 20px; /* 좌우 box 간 간격 */
-        align-items: flex-start;
-      }
-      .left {
-        flex: 1;
-        background: url("img/c2.png") no-repeat center center;
-        background-size: contain;
-        background-color: #f5f5f5;
-        height: 450px; /* 고정 높이 지정 가능 */
-      }
-      .right {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-left: 100px;
-      }
+
       /* 텍스트 요소들 스타일링 */
       .logo-box {
         height: 40px;
@@ -131,79 +109,29 @@
         color: #555;
         margin-bottom: 40px;
       }
-      /* 영양정보 테이블 영역 */
-      .nutrition-wrap {
-        width: 100%;
-        padding: 40px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-      }
-      .nutrition-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #6f4e37;
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        text-align: left;
-        margin-bottom: 12px;
-      }
-      .nutrition-table {
-        width: 100%;
-        max-width: 1000px;
-        border-collapse: collapse;
-        background-color: #fff;
-        border-radius: 2px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        font-family: "Noto Sans KR", sans-serif;
-        text-align: center;
-      }
-      .nutrition-table th {
-        padding: 14px 16px;
-        background-color: #f6f3ef;
-        color: #5c4033;
-        font-weight: 600;
-        border: 1px solid #ccc;
-      }
-      .nutrition-table td {
-        padding: 14px 16px;
-        background-color: #fdfaf6;
-        border: 1px solid #ccc;
-        color: #333;
-      }
-      .nutrition-table tr:hover td {
-        background-color: #fdf4ec;
-      }
-      /* 알레르기 정보 */
-      .allergy-wrap {
-        width: 100%;
-        max-width: 600px;
-        padding: 0 10px;
-        margin-top: 12px;
-        font-size: 0.85rem;
-        color: #666;
-        line-height: 1.5;
-        text-align: left;
-      }
-      .allergy-note {
-        margin-top: 4px;
-      }
+
       .name {
         font-size: 1.2rem;
       }
       .p1 {
         font-size: 0.8rem;
-        text-align: center;
+        color: #000000;
+      }
+      .p2 {
+        font-size: 1.2rem;
+        text-align: ;
+        color: #cc0808;
+      }
+      .p3 {
+        font-size: 0.8rem;
+        padding-bottom: 2%;
       }
       .st1-bg {
         padding-top: 50px;
         padding-bottom: 5%;
       }
       .st1 {
-        width: 1400px;
+        width: 1000px;
         margin: auto;
         display: flex;
         justify-content: space-between;
@@ -211,20 +139,18 @@
         height: auto;
         gap: 40px 20px;
       }
-      .s1 {
-        width: 25%;
-        height: 300px;
-      }
-      .s1 img {
+
+      .e1 {
         width: 100%;
       }
-      .s1 p {
+      .e1 img {
+        width: 100%;
+      }
+      .e1 p {
         font-size: 1rem;
         font-weight: bold;
       }
-      .s1:hover img {
-        transform: scale(1.03);
-      }
+
       .c2c img {
         width: 100%;
         height: 315px;
@@ -317,33 +243,21 @@
             </div>
             <nav class="gnb">
               <ul class="clear">
-                <li>
+               <li>
                   <a href="#">Menu</a>
                   <ul class="submenu">
-                    <li>
-                      <a href="sub-c1.html"><mark>COFFEE</mark></a>
-                    </li>
-                    <li>
-                      <a href="sub-t1.html"><mark>라떼ㆍ초콜릿ㆍ티</mark></a>
-                    </li>
-                    <li>
-                      <a href="sub-h1.html"><mark>할리치노ㆍ빙수</mark></a>
-                    </li>
-                    <li>
-                      <a href="sub-j1.html"><mark>스무디ㆍ주스</mark></a>
-                    </li>
-                    <li>
-                      <a href="sub-s1.html"><mark>스파클링</mark></a>
-                    </li>
+                    <li><a href="sub-c1.html"><mark>COFFEE</mark></a></li>
+                    <li><a href="sub-t1.html"><mark>라떼ㆍ초콜릿ㆍ티</mark></a></li>
+                    <li><a href="sub-h1.html"><mark>할리치노ㆍ빙수</mark></a></li>
+                    <li><a href="sub-j1.html"><mark>스무디ㆍ주스</mark></a></li>
+                    <li><a href="sub-s1.html"><mark>스파클링</mark></a></li>
                     <li><a href="#">푸드</a></li>
                   </ul>
                 </li>
                 <li>
                   <a href="#">HOLLS Mall</a>
                   <ul class="submenu">
-                    <li>
-                      <a href="sub-hc1.html"><mark>할리스콘</mark></a>
-                    </li>
+                    <li><a href="sub-hc1.html"><mark>할리스콘</mark></a></li>
                     <li><a href="#">할리스카드</a></li>
                     <li><a href="#">E-Store</a></li>
                     <li><a href="#">구매내역</a></li>
@@ -352,12 +266,8 @@
                 <li>
                   <a href="#">Membership</a>
                   <ul class="submenu">
-                    <li>
-                      <a href="sub-st1.html"><mark>스마트 오더</mark></a>
-                    </li>
-                    <li>
-                      <a href="sub-mt1.html"><mark>멤버쉽 혜택</mark></a>
-                    </li>
+                    <li><a href="sub-st1.html"><mark>스마트 오더</mark></a></li>
+                    <li><a href="sub-mt1.html"><mark>멤버쉽 혜택</mark></a></li>
                   </ul>
                 </li>
                 <li>
@@ -393,143 +303,12 @@
       <div id="gnbBg"></div>
     </header>
 
-    <h2 class="coffee">COFFEE</h2>
-    <div class="container">
-      <div class="left"></div>
-      <div class="right">
-        <div class="logo-box">
-          <img src="img/fts.png" />
-        </div>
-        <div class="coffee-name">
-          디카페인 바닐라 딜라이트
-          <p class="name">Vanilla Delight (Decaf blend)</p>
-        </div>
-        <div class="coffee-desc">
-          할리스만의 노하우로 블렌딩한 디카페인 원액을 더해<br />
-          더욱 부드럽고 달콤한 디카페인 바닐라 딜라이트<br />
-          (*바닐라 파우더 내 카페인 일부 함유)
-        </div>
-      </div>
-    </div>
-
-    <div class="nutrition-wrap">
-      <!-- 표 위 설명 -->
-      <p class="nutrition-title">
-        제품영양정보 (1회 제공량 / Regular / 354ml 기준 (Grande/472ml,
-        Venti/591ml))
-      </p>
-      <table class="nutrition-table">
-        <!-- 공통 아래에 위치한 영양정보 테이블 -->
-        <tr>
-          <th></th>
-          <th>칼로리</th>
-          <th>당류</th>
-          <th>단백질</th>
-          <th>포화지방</th>
-          <th>나트륨</th>
-          <th>카페인</th>
-        </tr>
-        <tr>
-          <td>HOT</td>
-          <td>247kcal</td>
-          <td>31g(31%)</td>
-          <td>10g(18%)</td>
-          <td>5.6g(38%)</td>
-          <td>218mg(11%)</td>
-          <td>25mg</td>
-        </tr>
-        <tr>
-          <td>ICED</td>
-          <td>192kcal</td>
-          <td>24g(24%)</td>
-          <td>5g(10%)</td>
-          <td>4.8g(32%)</td>
-          <td>147mg(11%)</td>
-          <td>25mg</td>
-        </tr>
-      </table>
-      <!-- 알레르기 정보 -->
-      <div class="allergy-wrap">
-        <p class="allergy-info">알레르기 유발요인: 우유, 대두</p>
-        <p class="allergy-note">
-          *식품 등의 표시·광고에 관한 법률에 의거하여 알레르기 표시항목에
-          한해서만 표기함
-        </p>
-      </div>
-    </div>
+    <h2 class="coffee">멤버십혜택</h2>
 
     <div class="st1-bg">
       <div class="st1">
-        <div class="s1">
-          <a href="sub-c1.html">
-            <img src="img/c9.png" />
-            <p class="p1">아메리카노</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c3.html">
-            <img src="img/c3.png" />
-            <p class="p1">디카페인 아메리카노</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c4.html">
-            <img src="img/c4.png" />
-            <p class="p1">디카페인 카페라떼</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c6.html">
-            <img src="img/c6.png" />
-            <p class="p1">바닐라 딜라이트</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c7.html">
-            <img src="img/c7.png" />
-            <p class="p1">블랙 아리아 딥라떼</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c8.html">
-            <img src="img/c8.png" />
-            <p class="p1">블랙 아리아 아메리카노</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c10.html">
-            <img src="img/c10.png" />
-            <p class="p1">아포가토</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c9.html">
-            <img src="img/c11.png" />
-            <p class="p1">에스프레소</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c10.html">
-            <img src="img/c12.png" />
-            <p class="p1">카라멜 마키아또</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c11.html">
-            <img src="img/c13.png" />
-            <p class="p1">카페라떼</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub-c12.html">
-            <img src="img/c18.png" />
-            <p class="p1">콜드브루</p>
-          </a>
-        </div>
-        <div class="s1">
-          <a href="sub13.html">
-            <img src="img/c16.png" />
-            <p class="p1">콜드브루 딜라이트</p>
+        <div class="e1">
+             <img src="img/mt1.jpg" />
           </a>
         </div>
       </div>
